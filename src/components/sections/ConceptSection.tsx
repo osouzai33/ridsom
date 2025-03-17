@@ -31,7 +31,7 @@ export default function ConceptSection() {
     ];
 
     return (
-        <section id="concept" className="py-16 bg-white">
+        <section id="concept" className="py-8 bg-white">
             <div className="section-container" ref={ref}>
                 {/* ヘッダー部分 - シンプルに */}
                 <div className="text-center mb-16">

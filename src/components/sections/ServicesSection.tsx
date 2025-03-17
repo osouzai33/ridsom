@@ -70,7 +70,7 @@ export default function ServicesSection() {
                     各種サービスをワンストップで提供しております。
                 </p>
 
-                <div ref={ref} className="mt-12">
+                <div ref={ref} className="mt-6">
                     <motion.div
                         variants={containerVariants}
                         initial="hidden"
