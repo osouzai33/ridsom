@@ -11,19 +11,19 @@ export default function ConceptSection() {
 
     const conceptFeatures = [
         {
-            icon: <FaHandshake className="text-white text-3xl" />,
+            image: "/img/shake_hands_with_dealer.png",
             title: "信頼関係",
             description:
                 "お客様との絆を第一に考え、末永いお付き合いを大切にします。",
         },
         {
-            icon: <FaCar className="text-white text-3xl" />,
+            image: "/img/smiling_woman_driving.jpeg",
             title: "安心と快適",
             description:
                 "安全な車選びと万全のアフターサポートで安心のカーライフを提供します。",
         },
         {
-            icon: <FaTools className="text-white text-3xl" />,
+            image: "/img/car_with_family_and_seler.jpeg",
             title: "総合サポート",
             description:
                 "購入・買取・保険・メンテナンスまで一貫したサービスをお届けします。",
@@ -68,12 +68,13 @@ export default function ConceptSection() {
                             }}
                             className="bg-white rounded-lg shadow-lg overflow-hidden"
                         >
-                            {/* アイコンヘッダー */}
-                            <div className="bg-primary-600 p-6 flex justify-center">
-                                <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center">
-                                    {feature.icon}
-                                </div>
-                            </div>
+                            {/* 画像部分 - 上部に配置 */}
+                            <div
+                                className="w-full h-48 bg-cover bg-center"
+                                style={{
+                                    backgroundImage: `url(${feature.image})`,
+                                }}
+                            />
 
                             {/* テキストコンテンツ */}
                             <div className="p-6">

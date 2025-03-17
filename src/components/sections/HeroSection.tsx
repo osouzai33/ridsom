@@ -16,7 +16,7 @@ export default function HeroSection() {
                 <div
                     className="w-full h-full"
                     style={{
-                        backgroundImage: "url('/img/track_big.jpeg')",
+                        backgroundImage: "url('/img/track_driving_fast.jpeg')",
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                     }}

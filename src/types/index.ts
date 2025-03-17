@@ -52,6 +52,7 @@ export interface SiteConfig {
     brand: {
         name: string;
         concept: string;
+        icon: string;
         message: string;
     };
     hero: {

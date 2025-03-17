@@ -18,6 +18,7 @@ export const siteConfig: SiteConfig = {
     brand: {
         name: "RIDSOM Auto",
         concept: `信頼関係を築き、安心と快適を提供するカーライフパートナー。`,
+        icon: "public/img/shake_hands_with_dealer.jpeg",
         message:
             "RIDSOM Autoはお客様との絆を大切にし、幅広いサービスと豊富な知識であなたの理想のカーライフを全力サポートします。若い力と確かな経験が、あなたの未来を走り出す一台を見つけます。",
     },
@@ -150,4 +151,17 @@ export const siteConfig: SiteConfig = {
         },
     ],
     copyright: "© 2023 RIDSOM Auto",
+};
+
+export const colors = {
+    primary: "#3498db", // ブルー
+    secondary: "#2ecc71", // グリーン
+    accent: "#e74c3c", // レッド
+    background: "#f5f5f5", // ライトグレー
+    text: "#333333", // ダークグレー
+};
+
+export const fonts = {
+    primary: "'Roboto', sans-serif",
+    secondary: "'Open Sans', sans-serif",
 };
