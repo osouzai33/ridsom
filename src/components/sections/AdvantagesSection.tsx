@@ -57,9 +57,9 @@ export default function AdvantagesSection() {
                                 }}
                                 className="relative w-full h-72 md:h-96 rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group"
                             >
-                                {/* 画像部分（全面背景） */}
+                                {/* 画像部分（正方形中央配置） */}
                                 <div
-                                    className="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                                    className="absolute inset-0 w-full h-full flex items-center justify-center bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                                     style={{
                                         backgroundImage: `url(${getImagePath(
                                             advantage.icon || ""
@@ -67,17 +67,17 @@ export default function AdvantagesSection() {
                                     }}
                                 />
 
-                                {/* オーバーレイ（透過グラデーション）を削除 */}
-                                {/* テキストコンテンツを画像の上に配置 */}
-                                <div className="absolute inset-0 flex flex-col justify-end p-8">
-                                    <div className="bg-black/50 p-4 rounded">
-                                        <h3 className="text-3xl font-bold mb-3 text-white drop-shadow-lg">
-                                            {advantage.title}
-                                        </h3>
-                                        <p className="text-white/90 text-lg max-w-md">
-                                            {advantage.description}
-                                        </p>
-                                    </div>
+                                {/* オーバーレイ（透過グラデーション） */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent opacity-70"></div>
+
+                                {/* テキストコンテンツ（下部配置） */}
+                                <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+                                    <h3 className="text-3xl font-bold mb-3 drop-shadow-lg">
+                                        {advantage.title}
+                                    </h3>
+                                    <p className="text-white/90 text-lg max-w-md">
+                                        {advantage.description}
+                                    </p>
                                 </div>
                             </motion.div>
                         ))}
