@@ -1,0 +1,30 @@
+# Node.js
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor-specific files
+*.swp
+.vscode/
+
+# Temporary files
+*.tmp 
+
+# Next.js build output
+.next/
+
+# Environment variables
+.env
+
