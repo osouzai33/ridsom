@@ -12,7 +12,7 @@ export default function FlowSection() {
     return (
         <section id="flow" className="py-12 bg-gray-50">
             <div className="section-container">
-                <h2 className="section-title">ご利用の流れ</h2>
+                <h2 className="section-title text-black">ご利用の流れ</h2>
                 <p className="text-gray-600 text-center max-w-3xl mx-auto mb-16">
                     RIDSOM
                     Autoでは、お客様のご購入から納車までをスムーズにサポートいたします。

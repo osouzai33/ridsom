@@ -35,9 +35,9 @@ export default function InventorySection() {
     ];
 
     return (
-        <section id="inventory" className="py-12">
+        <section id="inventory" className="py-12 bg-white">
             <div className="section-container">
-                <h2 className="section-title">在庫車情報</h2>
+                <h2 className="section-title text-black">在庫車情報</h2>
 
                 <div className="text-center mb-12">
                     <p className="text-gray-600 max-w-3xl mx-auto mb-6">

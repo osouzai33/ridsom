@@ -34,7 +34,7 @@ export default function AdvantagesSection() {
     return (
         <section id="advantages" className="py-12 bg-gray-50">
             <div className="section-container">
-                <h2 className="section-title">選ばれる理由</h2>
+                <h2 className="section-title text-black">選ばれる理由</h2>
                 <p className="text-gray-600 text-center max-w-3xl mx-auto mb-10">
                     RIDSOM Autoが多くのお客様から選ばれる理由をご紹介します。
                     お客様のカーライフを末永くサポートするためのこだわりです。

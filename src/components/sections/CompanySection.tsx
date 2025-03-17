@@ -52,9 +52,9 @@ export default function CompanySection() {
     ];
 
     return (
-        <section id="company" className="py-12">
+        <section id="company" className="py-12 bg-white">
             <div className="section-container">
-                <h2 className="section-title">会社概要</h2>
+                <h2 className="section-title text-black">会社概要</h2>
 
                 <div
                     ref={ref}

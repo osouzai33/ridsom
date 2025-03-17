@@ -61,9 +61,9 @@ export default function ServicesSection() {
     };
 
     return (
-        <section id="services" className="py-12">
+        <section id="services" className="py-12 bg-white">
             <div className="section-container">
-                <h2 className="section-title">サービス</h2>
+                <h2 className="section-title text-black">サービス</h2>
                 <p className="text-gray-600 text-center max-w-3xl mx-auto mb-12">
                     RIDSOM
                     Autoでは、お客様のカーライフを総合的にサポートするため、

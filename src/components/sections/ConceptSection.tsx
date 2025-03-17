@@ -35,7 +35,7 @@ export default function ConceptSection() {
             <div className="section-container" ref={ref}>
                 {/* ヘッダー部分 - シンプルに */}
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold text-primary-700 mb-2">
+                    <h2 className="text-4xl font-bold text-black mb-2">
                         ブランドコンセプト
                     </h2>
                     <div className="w-20 h-1 bg-primary-500 mx-auto"></div>
