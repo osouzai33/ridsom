@@ -15,19 +15,19 @@ export default function AdvantagesSection() {
     const ref = useRef<HTMLDivElement>(null);
     const isInView = useInView(ref, { once: true, amount: 0.2 });
 
-    // アイコンマッピング
-    const getIcon = (iconName: string) => {
+    // 画像パスのマッピング
+    const getImagePath = (iconName: string) => {
         switch (iconName) {
             case "BsLightningCharge":
-                return <BsLightningCharge className="w-12 h-12 text-white" />;
+                return "/img/engine_watching_man.jpeg"; // 若い力と経験を表す画像
             case "BsPeople":
-                return <BsPeople className="w-12 h-12 text-white" />;
+                return "/img/loadservice_circle.jpeg"; // ワンストップサービスを表す画像
             case "BsGlobe":
-                return <BsGlobe className="w-12 h-12 text-white" />;
+                return "/img/japan_full_size.jpeg"; // 全国対応を表す画像
             case "BsGraphUp":
-                return <BsGraphUp className="w-12 h-12 text-white" />;
+                return "/img/car_buy_high.jpeg"; // 独自買取ルートを表す画像
             default:
-                return <BsLightningCharge className="w-12 h-12 text-white" />;
+                return "/img/cool_woman_driving.jpeg"; // デフォルト画像
         }
     };
 
@@ -41,7 +41,7 @@ export default function AdvantagesSection() {
                 </p>
 
                 <div ref={ref} className="max-w-6xl mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {siteConfig.advantages.map((advantage, index) => (
                             <motion.div
                                 key={index}
@@ -55,17 +55,26 @@ export default function AdvantagesSection() {
                                     duration: 0.5,
                                     delay: index * 0.2,
                                 }}
-                                className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                                className="relative w-full h-72 md:h-96 rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group"
                             >
-                                <div className="flex items-center">
-                                    <div className="bg-primary-600 p-5 flex items-center justify-center h-full">
-                                        {getIcon(advantage.icon || "")}
-                                    </div>
-                                    <div className="p-5">
-                                        <h3 className="text-xl font-bold mb-3 text-primary-600">
+                                {/* 画像部分（全面背景） */}
+                                <div
+                                    className="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                                    style={{
+                                        backgroundImage: `url(${getImagePath(
+                                            advantage.icon || ""
+                                        )})`,
+                                    }}
+                                />
+
+                                {/* オーバーレイ（透過グラデーション）を削除 */}
+                                {/* テキストコンテンツを画像の上に配置 */}
+                                <div className="absolute inset-0 flex flex-col justify-end p-8">
+                                    <div className="bg-black/50 p-4 rounded">
+                                        <h3 className="text-3xl font-bold mb-3 text-white drop-shadow-lg">
                                             {advantage.title}
                                         </h3>
-                                        <p className="text-gray-700">
+                                        <p className="text-white/90 text-lg max-w-md">
                                             {advantage.description}
                                         </p>
                                     </div>
